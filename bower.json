@@ -1,0 +1,21 @@
+{
+  "name": "meridian",
+  "version": "1",
+  "authors": [
+    "Eqwertylab <79225555735@ya.ru>"
+  ],
+  "description": "landing",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "html5-boilerplate": "~5.0.0",
+    "jquery": "~2.1.3"
+  }
+}
