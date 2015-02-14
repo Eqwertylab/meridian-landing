@@ -12,8 +12,9 @@
 
 html {
     color: #222;
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 1.4;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 /*
@@ -95,21 +96,478 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/*font-family: 'Noto Sans', sans-serif;*/
+/*font-family: 'Roboto Condensed', sans-serif;*/
+
+html {
+    font-size: 80%;
+} 
+body {
+    color: #859397;
+}
+.container {
+    min-width: 320px;
+    margin: 0 auto;
+}
+.section {
+    min-width: 320px;
+}
+.row {
+    padding: 0 10px;   
+}
+a {
+    color: #edcd5a;
+}
+
+/* ==========================================================================
+   Главное меню
+   ========================================================================== */
+.menu {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: table;
+    width: 100%;
+}
+.menu_item {
+    display: table-cell;
+    text-align: center;
+}
+.menu_item > a {
+    color: #fff;
+    display: block;
+    padding: 4px 5px;
+    text-decoration: none;
+}
+.menu_item > a:hover {
+    color: #edcd5a;
+}
+.ico {
+    display: inline-block;
+}
+.ico.__home {
+    width: 17px;
+    height: 1.4rem;
+    background: url(../img/ico_home.png) no-repeat;
+    vertical-align: middle;
+}
+
+/* ==========================================================================
+   Заголовок страницы
+   ========================================================================== */
+.header {
+    height: 300px;
+    background: url(../img/header_bg.png) no-repeat center top;
+    position: relative;
+}
+.header_caption {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 90%;
+    height: 8.5rem;
+    margin-top: -4rem;
+    color: #fff;
+    background: rgba(0,0,0,0.7);
+    padding: 10px;
+}
+.header_title {
+    font-size: 5rem;
+    line-height: 5rem;
+    float: left;
+    position: relative;
+}
+.header_description {
+    font-size: 1.125rem;
+    line-height: 1.4rem;
+    text-align: right;
+    position: absolute;
+    width: 100%;
+    right: 5px;
+    bottom: -3rem;
+}
 
 
+/* ==========================================================================
+   Слайдер
+   ========================================================================== */
+.slider {
+    position: relative;
+    height: 195px;
+}
+.slides, .control_nav, .direction_nav {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+} 
+.slides {
+    position: relative;
+}
+.slide {
+    transition: opacity 0.5s;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+}
+.slide.active {
+    opacity: 1;
+}
+.slide_content {
+    width: 90%;
+    height: 195px;
+    margin: 0 auto;
+    position: relative;
+}
+.direction_nav {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -24px;
+}
+.direction_nav li {
+    width: 17px;
+    height: 48px;
+    background-image: url(../img/arrow.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.direction_nav li:hover {
+    opacity: 1;
+}
+.direction_nav .before {
+    background-position: left top;
+    left: 15px;
+    top: 0;
+}
+.direction_nav .next {
+    background-position: right top;
+    right: 15px;
+    top: 0;
+}
+.control_nav {
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    width: 100%;
+}
+.control_nav li {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(237,205,97,0.5);
+    vertical-align: middle;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.control_nav li:hover {
+    background: rgba(237,205,97,1);
+}
+.control_nav li.active {
+    background: rgba(237,205,97,1);
+    width: 10px;
+    height: 10px;
+}
 
 
+/* ==========================================================================
+   Видео
+   ========================================================================== */
+.video {
+    background: #f9f7f4;
+    padding: 3.5rem 0;
+}
+.video_play {
+    padding: 0 10px;
+}
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+}
+.embed-responsive.embed-responsive-16by9 {
+    padding-bottom: 56.25%;
+}
+.embed-responsive.embed-responsive-4by3 {
+    padding-bottom: 75%;
+}
+.video_collection {
+    width: 100%;
+    overflow-x: scroll; 
+    margin: 15px 0 0 0;
+    padding: 0 0 10px 0;
+}
+.video_item {
+    width: 200px;
+    height: 150px;
+    margin: 0 10px;
+    overflow: hidden;
+    float: left;
+    background: url(../img/video/noimage.png) no-repeat left top;
+    cursor: pointer;
+    position: relative;
+    color: #383e40;
+}
+.video_item:before {
+    content: " ";
+    position: absolute;
+    width: 48px;
+    height: 60px;
+    left: 50%;
+    top: 50%;
+    margin: -30px 0 0 -24px;
+    background: url(../img/video/play.png) no-repeat left top;
+    opacity: 0.3;
+}
+.video_item.active:before,
+.video_item:hover:before {
+    opacity: 1;
+}
+.video_item_caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    font-size: 0.875rem;
+    background: rgba(255,255,255,0.5);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.video_item_inner {
+    padding: 0.4rem;
+    display: block;
+}
+
+/* ==========================================================================
+   Услуги
+   ========================================================================== */
+.service {
+    padding: 60px 0;
+}
+.service_list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.service_wrap {
+    margin-bottom: 15px;
+}
+.service_item {
+    padding: 0 10px;
+}
+.service_inner {
+    padding: 10px;
+    border: 1px solid #cfd1d3;
+}
+.service_ico img {
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    border: 1px solid #cfd1d3;
+}
+.service_caption {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+}
+.service_description {
+    font-size: 0.875rem;
+    margin: 5px 0;
+}
+.service_more {
+    text-align: right;
+}
+
+/* ==========================================================================
+   Promo text
+   ========================================================================== */
+.promo_text {
+    padding: 5rem 0;
+    background: #858994;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 2.1rem;
+    text-align: center;
+    color: #d4dbee;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
+    color: #858994;
+    background: #232328;
+    position: relative;
+    padding: 50px 0;
+}
+.footer_contact_item {
+    padding: 8px 0;
+}
+.footer_col_2 {
+    margin-top: 20px;
+}
+.copy {
+    text-align: center;
+    margin-bottom: 0;
+}
+.qwerty {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 0.75rem;
+}
+.ico.__footer {
+    display: inline-block;
+    width: 26px;
+    height: 17px;
+    vertical-align: middle;
+}
+.ico.__loc {
+    background: url(../img/ico_loc.png) no-repeat center;
+}
+.ico.__tel {
+    background: url(../img/ico_tel.png) no-repeat center;
+}
+.ico.__mail {
+    background: url(../img/ico_mail.png) no-repeat center;
+}
+
+/* ==========================================================================
+   Форма
+   ========================================================================== */
+.form_col_1 {
+    width: 50%;
+    float: left;
+}
+.form_row {
+    margin: 0 0 10px -15px;
+}
+.form_inner {
+    padding-left: 15px;
+    position: relative;
+}
+.form_control {
+    width: 90%;
+    padding: 5px 5%;
+}
+textarea.form_control {
+    width: 95%;
+    padding: 5px 2.5% 45px 2.5%;
+    height: 70px;
+}
+textarea + .error {
+    position: absolute;
+}
+.btn {
+    background: #edcd5a;
+    color: #53535e;
+    border: 0px;
+    font-size: 1rem;
+    padding: 8px 17px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.btn:hover {
+    background: #ea9308;
+}
+.form div.error {
+    font-size: 0.875rem;
+    color: #a50000;
+}
 
 
+/* ==========================================================================
+   Медиа запросы
+   ========================================================================== */
+@media (min-width: 768px) {
+    html {
+        font-size: 90%;
+    }
+    .row {
+        padding: 0 15px;   
+    }
+    .container {
+        width: 768px;
+    }
+    .menu {
+        display: block;
+    }
+    .menu_item {
+        display: block;
+        float: left;
+        padding: 4px 15px;
+    }
+    .header {
+        height: 500px;
+    }
+    .header_caption {
+        width: 45%;
+    }
+    .slide_content {
+        width: 90%;
+    }
+    .video_play {
+        padding: 0 45px;
+    }
+    .video_item_caption {
+        top: 100%;
+        margin-top: -2rem;
+    }
+    .video_item.active .video_item_caption,
+    .video_item:hover .video_item_caption {
+        top: auto;
+        bottom: 0;
+    }
+    .service_wrap {
+        width: 33.33%;
+        float: left;
+    }
+    .service_item {
+        padding: 0 15px;
+    }
+    .footer_col_1 {
+        width: 45.42%;
+        margin-right: 0.12%;
+        float: left;
+    }
+    .footer_col_2 {
+        margin-top: 0;
+        width: 52.02%;
+        float: right;
+    }
+}
 
-
-
-
-
-
-
-
-
+@media (min-width: 970px) {
+    html {
+        font-size: 100%;
+    }
+    .container {
+        width: 970px;
+    }
+    .slide_content {
+        width: 70%;
+    }
+}
 
 /* ==========================================================================
    Helper classes
