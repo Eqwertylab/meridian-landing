@@ -12,9 +12,9 @@
 	$crash = array(	'title' => 	'Произошла ошибка :(',
 					'desc'	=>	'Повторите отправку позже или позвоните нам по телефону.' );
 
-	$emailFrom = 'info@tophit.pro'; // От кого
-	$e_sendto =  '79225555735@yandex.ru'; //Кому
-	$e_subject = 'Сообщение с m.tagheuer.tophit.pro '; //.$feedback;
+	$emailFrom = 'info@meridian56.ru'; 			// От кого
+	$e_sendto =  'do@meridian56.ru'; 			// Кому
+	$e_subject = 'Сообщение с меридиана'; 		// Тема письма
 	$e_body = "Cообщение с формы ". $submit ." от: "
 					.$name								
 					. "\n"
@@ -24,7 +24,7 @@
 					. "\n"
 					."\r\n\n";
 
-	if(mail($e_sendto, $e_subject, $e_body, "From: $emailFrom\r\nReply-To: $emailFrom\r\nReturn-Path: $emailFrom\r\n"))
+	if(mail($e_sendto, $e_subject, $e_body, "From: $emailFrom\r\nReply-To: $emailFrom\r\n"))
 	{						 
 		echo json_encode($win);
 	} 

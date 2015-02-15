@@ -3,31 +3,38 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Заголовок сайта</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
-
+    
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+
+    
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+
+
+    <!-- ЗАГОЛОВОК САЙТА -->
     <header class="section header" id="section_home">
       <div class="container">
         <div class="row">
+
+          <!-- ГЛАВНОЕ МЕНЮ -->
           <ul class="menu">
             <!-- <li class="menu_item"><a href="#"><i class="ico __home"></i></a></li> -->
             <li class="menu_item"><a href="#section_video">Видео</a></li>
             <li class="menu_item"><a href="#section_service">Услуги</a></li>
             <li class="menu_item"><a href="#section_contact">Контакты</a></li>
           </ul>
+          <!-- / ГЛАВНОЕ МЕНЮ -->
+
         </div>
       </div>
       <div class="header_caption">
@@ -39,11 +46,16 @@
         </div>
       </div>
     </header>
+    <!-- / ЗАГОЛОВОК САЙТА -->
 
+
+    <!-- НОВОСТИ -->
     <section class="section new">
       <div class="container">
         <div class="slider">
           <ul class="slides">
+
+            <!-- НОВОСТЬ 1 -->
             <li class="slide active">
               <div class="slide_content">
                 <span style="position: absolute; font-size: 3.5rem; color: #707b7e; top: 5%; left: 0%; z-index: 10;">Теперь</span>
@@ -51,13 +63,18 @@
                 <img src="img/fish1.jpg" style="position: absolute; color: #707b7e; top: 5%; right: 0%; z-index: 0;">
               </div>
             </li>
+            <!-- / НОВОСТЬ 1 -->
+
+            <!-- НОВОСТЬ 2 -->
             <li class="slide">
               <div class="slide_content">
-                <span style="position: absolute; font-size: 3.5rem; color: #707b7e; top: 5%; left: 0%; z-index: 10;">Другая новость</span>
+                <span style="position: absolute; font-size: 2.5rem; color: #707b7e; top: 15%; left: 0%; z-index: 10;">Другая новость</span>
                 <span style="position: absolute; font-size: 2rem; color: #707b7e; top: 50%; left: 5%; z-index: 10;">под номером 2</span>
                 <img src="img/fish2.jpg" style="position: absolute; color: #707b7e; top: 5%; right: 0%; z-index: 0;">
               </div>
             </li>
+            <!-- / НОВОСТЬ 2 -->
+
           </ul>
           <ul class="control_nav">
             <li class="active"></li>
@@ -70,66 +87,86 @@
         </div>
       </div>
     </section>
+    <!-- / НОВОСТИ -->
 
+
+    <!-- ВИДЕО -->
     <section class="section video" id="section_video">
       <div class="container">
         <div class="row">
           <div class="video_play">
             <div class="embed-responsive embed-responsive-16by9">
               <div class="embed-responsive-item">
+                <!-- АКТИВНОЕ ВИДЕО -->
                 <iframe id="video_player" src="https://www.youtube.com/embed/rEbfteUIkYU" frameborder="0" allowfullscreen></iframe>
+                <!-- / АКТИВНОЕ ВИДЕО -->
               </div>
             </div>
           </div>
           <div class="video_collection">
             <div class="video_collection_list">
+
+              <!-- ВИДЕО 1 -->
               <div class="video_item active" data-url="https://www.youtube.com/embed/I73lw-nHKYE">
                 <img src="img/fish2.jpg" alt="">
                 <span class="video_item_caption"><span class="video_item_inner">
                   Обучающее видео
                 </span></span>
               </div>
+              <!-- / ВИДЕО 1 -->
+
+              <!-- ВИДЕО 2 -->
               <div class="video_item" data-url="https://www.youtube.com/embed/SGbvugw5AqM">
                 <img src="img/fish3.jpg" alt="">
                 <span class="video_item_caption"><span class="video_item_inner">
                   Обучающее видео с длинным названием
                 </span></span>
               </div>
+              <!-- / ВИДЕО 2 -->
+
+              <!-- ВИДЕО 3 -->
               <div class="video_item" data-url="https://www.youtube.com/embed/mdBp6zerwwA">
                 <img src="img/fish4.jpg" alt="">
                 <span class="video_item_caption"><span class="video_item_inner">
                   Обучающее видео с длинным названием
                 </span></span>
               </div>
+              <!-- / ВИДЕО 3 -->
+
+              <!-- ВИДЕО 4 -->
               <div class="video_item" data-url="https://www.youtube.com/embed/I73lw-nHKYE">
                 <img src="img/fish2.jpg" alt="">
                 <span class="video_item_caption"><span class="video_item_inner">
                   Обучающее видео с длинным названием
                 </span></span>
               </div>
+              <!-- / ВИДЕО 4 -->
+
+              <!-- ВИДЕО 5 -->
               <div class="video_item" data-url="https://www.youtube.com/embed/SGbvugw5AqM">
                 <!-- нет картинки -->
                 <span class="video_item_caption"><span class="video_item_inner">
                   Видео без картинки с длинным названием
                 </span></span>
               </div>
-              <div class="video_item" data-url="https://www.youtube.com/embed/mdBp6zerwwA">
-                <img src="img/fish4.jpg" alt="">
-                <span class="video_item_caption"><span class="video_item_inner">
-                  Обучающее видео с длинным названием
-                </span></span>
-              </div>
+              <!-- / ВИДЕО 5 -->
+
             </div>
           </div>
           <div class="clearfix"></div>
         </div>
       </div>
     </section>
+    <!-- / ВИДЕО -->
 
+
+    <!-- УСЛУГИ -->
     <section class="section service" id="section_service">
       <div class="container">
         <ul class="service_list">
+          
 
+          <!-- УСЛУГА 1 -->
           <li class="service_wrap">
             <div class="service_item">
               <div class="service_inner">
@@ -142,12 +179,14 @@
               </div>
             </div>
           </li>
-
+          <!-- / УСЛУГА 1 -->
+          
+          <!-- УСЛУГА 2 -->
           <li class="service_wrap">
             <div class="service_item">
               <div class="service_inner">
                 <div class="service_ico">
-                  <img src="img/service/ico1.jpg" alt="">
+                  <img src="img/service/ico2.jpg" alt="">
                 </div>
                 <div class="service_caption">Териториальные зоны</div>
                 <p class="service_description">Берем любую подоснову - космоснимок, ортофото или тематическую карту и отображаем ваши объекты поверх</p>
@@ -155,12 +194,14 @@
               </div>
             </div>
           </li>
-
+          <!-- / УСЛУГА 2 -->
+          
+          <!-- УСЛУГА 3 -->
           <li class="service_wrap">
             <div class="service_item">
               <div class="service_inner">
                 <div class="service_ico">
-                  <img src="img/service/ico1.jpg" alt="">
+                  <img src="img/service/ico3.jpg" alt="">
                 </div>
                 <div class="service_caption">Кадастровое деление</div>
                 <p class="service_description">Берем любую подоснову - космоснимок, ортофото или тематическую карту и отображаем ваши объекты поверх</p>
@@ -168,25 +209,29 @@
               </div>
             </div>
           </li>
-
+          <!-- / УСЛУГА 3 -->
+          
+          <!-- УСЛУГА 4 -->
           <li class="service_wrap">
             <div class="service_item">
               <div class="service_inner">
                 <div class="service_ico">
-                  <img src="img/service/ico1.jpg" alt="">
+                  <img src="img/service/ico4.jpg" alt="">
                 </div>
                 <div class="service_caption">Муниципальные услуги</div>
-                <p class="service_description">Берем любую подоснову - космоснимок, ортофото или тематическую карту и отображаем ваши объекты поверх</p>
+                <p class="service_description">Берем любую подоснову и - космоснимок, ортофото или тематическую карту и отображаем ваши объекты поверх</p>
                 <div class="service_more"><a href="">Подробнее</a></div>
               </div>
             </div>
           </li>
-
+          <!-- / УСЛУГА 4 -->
+          
+          <!-- УСЛУГА 5 -->
           <li class="service_wrap">
             <div class="service_item">
               <div class="service_inner">
                 <div class="service_ico">
-                  <img src="img/service/ico1.jpg" alt="">
+                  <img src="img/service/ico5.jpg" alt="">
                 </div>
                 <div class="service_caption">Пополнение бюджета</div>
                 <p class="service_description">Берем любую подоснову - космоснимок, ортофото или тематическую карту и отображаем ваши объекты поверх</p>
@@ -194,12 +239,14 @@
               </div>
             </div>
           </li>
-
+          <!-- / УСЛУГА 5 -->
+          
+          <!-- УСЛУГА 6 -->
           <li class="service_wrap">
             <div class="service_item">
               <div class="service_inner">
                 <div class="service_ico">
-                  <img src="img/service/ico1.jpg" alt="">
+                  <img src="img/service/ico6.jpg" alt="">
                 </div>
                 <div class="service_caption">Минимум обслуживания</div>
                 <p class="service_description">Берем любую подоснову - космоснимок, ортофото или тематическую карту и отображаем ваши объекты поверх</p>
@@ -207,11 +254,15 @@
               </div>
             </div>
           </li>
+          <!-- / УСЛУГА 6 -->
           
         </ul>
       </div>
       <div class="clearfix"></div>
     </section>
+    <!-- / УСЛУГИ -->
+
+
 
     <section class="section promo_text" id="section_text">
       <div class="container">
@@ -221,6 +272,8 @@
       </div>
     </section>
 
+
+    <!-- КОНТАКТЫ -->
     <div class="section footer" id="section_contact">
       <div class="container">
         <div class="row">
@@ -237,6 +290,8 @@
               </div>
             </div>
           </div>
+
+          <!-- ФОРМА ОБРАТНОЙ СВЯЗИ -->
           <div class="footer_col_2">
             <div class="footer_form">
               <form action="" class="form" id="form">
@@ -257,6 +312,7 @@
                   <div class="form_col_2">
                     <div class="form_inner">
                       <textarea name="message" class="form_control" placeholder="Ваше обращение, просьба или вопрос"></textarea>
+                      <input type="hidden" name="submit" value="Форма в футере">
                       <input type="submit" class="btn" value="Отправить">
                     </div>
                   </div>
@@ -264,6 +320,9 @@
               </form>
             </div>
           </div>
+          <!-- / ФОРМА ОБРАТНОЙ СВЯЗИ -->
+
+
         </div>
         <div class="clearfix"></div>
         <div class="row">
@@ -275,6 +334,7 @@
       <span class="qwerty">Дизайн - <a href="">qwertylab.ru</a></span>
       <div class="clearfix"></div>
     </div>
+    <!-- / КОНТАКТЫ -->
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>

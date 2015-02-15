@@ -160,7 +160,7 @@ a {
    ========================================================================== */
 .header {
     height: 300px;
-    background: url(../img/header_bg.png) no-repeat center top;
+    background: url(../img/header_bg.jpg) no-repeat center top;
     position: relative;
 }
 .header_caption {
@@ -492,6 +492,15 @@ textarea + .error {
 }
 .form div.error {
     font-size: 0.875rem;
+    color: #a50000;
+}
+.form_answer {
+    margin: 0 0 10px 0;
+}
+.form_answer.__success {
+    color: #50832B;
+}
+.form_answer.__error {
     color: #a50000;
 }
 

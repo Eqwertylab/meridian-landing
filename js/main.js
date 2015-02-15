@@ -149,38 +149,34 @@ var App = {
       $('body').on('submit', form_id, function(event) {
         event.preventDefault();
         var thisForm = this;
-        App.Cons.dataSend = $(this).serialize();
-        App.Cons.form_action = 'mail.php';  
+        var dataSend = $(this).serialize();
+        var form_action = 'mail.php';  
+        var $inputs = $(thisForm).find('.form_control');
 
         if($(thisForm).find('input.error').length <= 0) {
           $.ajax({  
             type: "POST",
-            url: App.Cons.form_action,
-            data: App.Cons.dataSend,
+            url: form_action,
+            data: dataSend,
             dataType: "json",
             beforeSend : function(){
               $(thisForm).find('input,button').attr('disabled', 'true');
-              // $(thisForm)
-              //   .find('button');
-              //   .append( $('<span class="glyphicon glyphicon-refresh spin"></span>') );
             },
             complete : function(){
               $(thisForm).find('input,button').removeAttr('disabled');
-              // $(thisForm)
-              //   .find('.glyphicon-refresh')
-              //   .remove();
-              // $('#form0-modal').modal('hide');
             }
-          })  .always(function(answer) {
-              // $('#modal-alert')
-              //   .find('h3').text(answer.title)
-              //   .next('p').text(answer.desc)
-              //   .closest('#modal-alert').modal('show');
+          })  
+              .done(function(answer) {
+              $(thisForm).prepend('<p class="form_answer __success">' + answer.title + '<br/>' + answer.desc + '</p>');
+              $inputs.val('');
+          })
+              .always(function(answer) {
+              $(thisForm).find('.form_answer').fadeOut(10000, function() {
+                $(this).remove();
+              });
+
           })  .fail(function() {
-              // $('#modal-alert')
-              //   .find('h3').text('Произошла ошибка :(')
-              //   .next('p').text('Повторите отправку позже или позвоните нам по телефону.')
-              //   .closest('#modal-alert').modal('show');
+              $(thisForm).prepend('<p class="form_answer __error">' + answer.title + '<br/>' + answer.desc + '</p>');
           });
         }     
       });
